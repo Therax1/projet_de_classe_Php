@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echecs| Connexion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+    <!--Lien pour l'importation des icones-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!--Phrase d'accroche descriptive-->
+    <div class="brand">
+        <div class="div-1">
+            <h1>Tournois d'échec</h1>
+        </div>
+        <div class="div-2">
+            <p>Inscrivez-vous dès maintenant</p>
+        </div>
+    </div>
+    <!--Image descriptive-->
+    <div class="image-brand">
+        <img src="img/Echecs.png" alt="Une image décrivant un jeu d'échecs">
+    </div>
+
+    <form action="traitement.php" method="POST">
+        <div class="form-1">
+            <div class="element1 form1 nomdefamille">
+                <input type="text" name="nomDeFamille" id="Nomdefamille" class="Nomdefamille" placeholder="Nom :">
+                <i class='bx bxs-user' ></i>
+            </div>
+            <div class="element2 form1 prenomdeuser">
+                <input type="text" name="prenomDeUser" id="prenomDeUser" class="prenomDeUser" placeholder="Prénom">
+                <i class='bx bx-user-plus' ></i>
+            </div>
+            <div class="element3 form1 dateDeNaissance">
+                <input type="date" name="dateDeNaissance" id="dateDeNaissance" class="dateDeNaissance">
+            </div>
+            <div class="element4 form1 numeroDeTéléphone">
+                <input type="number" name="numeroDeTéléphone" id="numeroDeTéléphone" class="numeroDeTéléphone" placeholder="Numéro de Téléphone">
+            </div>
+            <div class="element5 form1 adressEmail">
+                <input type="email" name="" id="adressEmail" class="adressEmail" placeholder="Adresse Email :">
+                <i class='bx bxs-envelope' ></i>
+            </div>
+            <div class="element6 form1 adresseUser">
+                <input type="text" name="adresseUser" id="adresseUser" class="adresseUser">
+                <i class='bx bx-current-location' ></i>
+            </div>
+            <div class="element7 form1 Username">
+                <input type="text" name="Username" id="Username" class="Username">
+                <i class='bx bxs-user-badge' ></i>
+            </div>
+        </div>
+        <div class="form-2">
+            
+        </div>
+    </form>
+</body>
+</html>
