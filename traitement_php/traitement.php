@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         }
 
         // preparation des requetes sql
-        $requetesql = "INSERT INTO utilisateurs (prenomUser, nomUser, email, Telephone, adresse, Date_de_Naissance, Mot_de_Passe, ProfessionUtilisateur, Centre_Interets, LevelUser) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $requetesql = "INSERT INTO utilisateurs (prenomUser, nomUser, email, Telephone, adresse, Date_de_Naissance, Mot_de_Passe, ProfessionUtilisateur, Centre_Interets, LevelUser) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $connexion->prepare($requetesql);
         $stmt->bind_param("sssissssss", $prenom, $nom , $email, $numeroDeTelephone, $Adresse, $naissance, $passwordHash, $profession, $interest, $level);
 
