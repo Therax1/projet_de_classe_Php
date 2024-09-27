@@ -8,14 +8,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="img/Chess Logo.png" type="image/x-icon">
     <script src="js/scripts.js" defer></script>
-    <!--Lien pour l'importation des icones-->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
     <!--Nous avons décider de diviser cette page en deux petites pages et les formulaires en deux aussi; Je sais que j'en fais trop mais en gros c'est pour que je sois un peu à l'aise; je pari que tout les développeur le font aussi -->
-
-
     <!--Partie 1 Le passage à l'action-->
     <div class="part1">
         <!--Phrase d'accroche descriptive-->
@@ -24,8 +19,8 @@
                 <h1>Tournois d'échec</h1>
             </div>
             <div class="div-2">
-                <p class="brand-paragraphe">Inscrivez-vous dès maintenant</p>
-                <p class="brand-paragraphe" hidden>Aidez-nous à mieux vous connaître</p>
+                <p class="brand-paragraphe1">Inscrivez-vous dès maintenant</p>
+                <p class="brand-paragraphe2" hidden>Aidez-nous à mieux vous connaître</p>
             </div>
         </div>
         <!--Image descriptive-->
@@ -44,8 +39,7 @@
                     <div class="formbold-form-title">
                         <h2 class="">Inscrivez-vous dès maintenant</h2>
                     </div>
-    
-                    <div class="formbold-input-flex">
+                    <div class="formbold-input-flex1">
                         <div>
                             <label for="firstname" class="formbold-form-label">
                                 Prénoms :
@@ -58,7 +52,7 @@
                         </div>
                     </div>
     
-                    <div class="formbold-input-flex">
+                    <div class="formbold-input-flex1">
                         <div>
                             <label for="email" class="formbold-form-label"> Email : </label>
                             <input type="email" name="email" id="email" class="formbold-form-input" />
@@ -83,7 +77,7 @@
                         <input type="date" name="address2" id="address2" class="formbold-form-input" />
                     </div>
     
-                    <div class="formbold-input-flex">
+                    <div class="formbold-input-flex1">
                         <div>
                             <label for="state" class="formbold-form-label"> Mot de Passe : </label>
                             <input type="password" name="password " id="state" class="formbold-form-input" />
@@ -113,98 +107,192 @@
                         </label>
                     </div>
     
-                    <button type="button" id="bouttonsuivant" class="formbold-btn">Register Now</button>
+                    <button type="button" id="bouttonsuivant" class="formbold-btn">Suivant</button>
                 </div>
             </div>
-
+<!-- Deuxième partie du formulaire -->
             <div hidden class="form-2">
-                <div class="form2 form2-element1 ProfessionChoice">
-                    <h3>Quelle est votre Profession?</h3>
-                    <div class="profession1">
-                        <input type="radio" name="professionRadio professionRadio1" id=""
-                            class="prfesradio professionRadio1">
-                        <label for="professionRadio1"></label>
+                <div class="formbold-input-flex">
+                    <div class="formbold-form-title"></div>
+                        <h2 class="">Inscrivez-vous dès maintenant</h2>
                     </div>
-                    <div class="profession2">
-                        <input type="radio" name="professionRadio professionRadio2" id=""
-                            class="prfesradio professionRadio2">
-                        <label for="professionRadio2"></label>
+                  <div class="formbold-mb-5">
+                    <label for="qusOne" class="formbold-form-label">
+                      Quelle est votre profession?
+                    </label>
+                    <div class="formbold-radio-flex">
+                      <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                          <input
+                            class="formbold-input-radio"
+                            type="radio"
+                            name="qusOne"
+                            id="qusOne"
+                            value="Docteur"
+                          />
+                          Docteur
+                          <span class="formbold-radio-checkmark"></span>
+                        </label>
+                      </div>
+            
+                      <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                          <input
+                            class="formbold-input-radio"
+                            type="radio"
+                            name="qusOne"
+                            id="qusOne"
+                            value="Professeur"
+                          />
+                          Professeur
+                          <span class="formbold-radio-checkmark"></span>
+                        </label>
+                      </div>
+            
+                      <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                          <input
+                            class="formbold-input-radio"
+                            type="radio"
+                            name="qusOne"
+                            id="qusOne"
+                            value="Rappeur"
+                          />
+                          Rappeur
+                          <span class="formbold-radio-checkmark"></span>
+                        </label>
+                      </div>
+            
+                      <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                          <input onclick="afficherzonedetexte()"
+                            class="formbold-input-radio"
+                            type="radio"
+                            name="qusOne"
+                            id="qusOne"
+                            value="Autres"
+                          />
+                          Autres:
+                          <span class="formbold-radio-checkmark"></span> <br>
+                        </label>
+                        <textarea hidden class="textareas" style="margin: 5px 0px;" name="autresprofession" id="autresprofession" cols="50" rows="2" placeholder="Entrez quelque chose..."></textarea>
+                      </div>
                     </div>
-                    <div class="profession3">
-                        <input type="radio" name="professionRadio professionRadio3" id=""
-                            class="prfesradio professionRadio3">
-                        <label for=""></label>
+                  </div>
+            
+                  <div class="formbold-mb-5">
+                    <label for="qusTwo" class="formbold-form-label">
+                      Vos centres d'intérêts:
+                    </label>
+            
+                    <div class="formbold-radio-flex">
+                      <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                          <input
+                            class="formbold-input-radio"
+                            type="checkbox"
+                            name="qusTwo"
+                            id="qusTwo"
+                            value="FootBall"
+                          />
+                          FootBall
+                          <span class="formbold-radio-checkmark"></span>
+                        </label>
+                      </div>
+            
+                      <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                          <input
+                            class="formbold-input-radio"
+                            type="checkbox"
+                            name="qusTwo"
+                            id="qusTwo"
+                            value="BascketBall"
+                          />
+                          BascketBall
+                          <span class="formbold-radio-checkmark"></span>
+                        </label>
+                      </div>
+            
+                      <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                          <input
+                            class="formbold-input-radio"
+                            type="checkbox"
+                            name="qusTwo"
+                            id="qusTwo"
+                            value="Course de Moto"
+                          />
+                          Course de Moto
+                          <span class="formbold-radio-checkmark"></span>
+                        </label>
+                      </div>
+            
+                      <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                          <input
+                            class="formbold-input-radio"
+                            type="checkbox"
+                            name="qusTwo"
+                            id="qusTwo"
+                          />
+                          Aucun de ceux-ci
+                          <span class="formbold-radio-checkmark"></span>
+                        </label>
+                      </div>
                     </div>
-                    <div class="profession4">
-                        <input type="radio" name="professionRadio professionRadio4" id=""
-                            class="prfesradio professionRadio4">
-                        <label for=""></label>
+                  </div>
+            
+                  <div>
+                    <label for="qusThree" class="formbold-form-label">
+                      Votre niveau de Jeu : 
+                    </label>
+            
+                    <div class="formbold-radio-flex">
+                      <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                          <input
+                            class="formbold-input-radio"
+                            type="radio"
+                            name="qusThree"
+                            id="qusThree"
+                            value="Debutant"
+                          />
+                          Debutant
+                          <span class="formbold-radio-checkmark"></span>
+                        </label>
+                      </div>
+            
+                      <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                          <input
+                            class="formbold-input-radio"
+                            type="radio"
+                            name="qusThree"
+                            id="qusThree"
+                            value="Intermédiaire"
+                          />
+                          Intermédiaire
+                          <span class="formbold-radio-checkmark"></span>
+                        </label>
+                      </div>
+            
+                      <div class="formbold-radio-group">
+                        <label class="formbold-radio-label">
+                          <input
+                            class="formbold-input-radio"
+                            type="radio"
+                            name="qusThree"
+                            id="qusThree"
+                            value="God"
+                          />
+                          God
+                          <span class="formbold-radio-checkmark"></span>
+                        </label>
+                      </div>
                     </div>
-                    <div class="profession5">
-                        <input type="radio" name="professionRadio professionRadio5" id=""
-                            class="prfesradio professionRadio5">
-                        <label for=""></label>
-                    </div>
-                    <div class="profession6">
-                        <input type="radio" name="professionRadio professionRadio6" id=""
-                            class="prfesradio professionRadio6">
-                        <label for=""></label>
-                    </div>
-                    <div class="profession7">
-                        <input type="radio" name="professionRadio professionRadio7" id=""
-                            class="prfesradio professionRadio7">
-                        <label for=""></label>
-                    </div>
-                </div>
-                <div class="form2 form2-element2 interestCenters">
-                    <h3>Quelles sont vos centres d'intérêts?</h3>
-                    <div class="interest1">
-                        <input type="checkbox" name="interestcheckbox1" id="" class="interestcenter interestcheckbox1">
-                        <label for="interestcheckbox1"></label>
-                    </div>
-                    <div class="interest2">
-                        <input type="checkbox" name="interestcheckbox2" id="" class="interestcenter interestcheckbox2">
-                        <label for=""></label>
-                    </div>
-                    <div class="interest3">
-                        <input type="checkbox" name="interestcheckbox3" id="" class="interestcenter interestcheckbox3">
-                        <label for=""></label>
-                    </div>
-                    <div class="interest4">
-                        <input type="checkbox" name="interestcheckbox4" id="" class="interestcenter interestcheckbox4">
-                        <label for=""></label>
-                    </div>
-                    <div class="interest5">
-                        <input type="checkbox" name="interestcheckbox5" id="" class="interestcenter interestcheckbox5">
-                        <label for=""></label>
-                    </div>
-                </div>
-                <div class="form2 form2-element3">
-                    <h3>Quelle est votre niveau de Jeu?</h3>
-                    <div class="level1">
-                        <input type="radio" name="level" id="" class="level1" value="Débutant">
-                        <label for=""></label>
-                    </div>
-                    <div class="level2">
-                        <input type="radio" name="level" id="" class="level2" value="Sénior">
-                        <label for=""></label>
-                    </div>
-                    <div class="level3">
-                        <input type="radio" name="level" id="" class="level3" value="Pro">
-                        <label for=""></label>
-                    </div>
-                    <div class="level4">
-                        <input type="radio" name="level" id="" class="level4" value="Seigneur">
-                        <label for=""></label>
-                    </div>
-                </div>
-                <div class="form2 form2-element4">
-                    <h3>Votre Motivation à nous rejoindre :</h3>
-                    <textarea name="diteQuelqueChose" id="diteQuelqueChose" cols="30" rows="10"
-                        placeholder="Dites quelques chose ..."></textarea>
-                    <button type="submit" class="EnvoyerLesdonnées">Envoyer</button>
-                </div>
-            </div>
+                  </div>
+                  <button class="formbold-btn">Submit</button>
             </div>
         </div>
     </form>
