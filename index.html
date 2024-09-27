@@ -29,42 +29,45 @@
         <div class="image-brand">
             <img src="img/Echecs.png" alt="Une image décrivant un jeu d'échecs">
         </div>
-        <button type="button">Se connecter</button>
+        <button class="buttonaction" type="button">Se connecter</button>
     </div>
 
     <!--Partie2 : formulaire-->
 
-    <div hidden class="part2 form">
-        <form action="traitement.php" method="POST">
+    <form hidden="hidden" action="traitement.php" method="POST">
+        <div class="container">
             <div class="form-1">
+                <h3>Entrez vos informations Personnelles</h3>
                 <div class="form1-element1 form1 nomdefamille">
-                    <input type="text" name="nomDeFamille" id="Nomdefamille" class="Nomdefamille" placeholder="Nom :">
+                    <input type="text" name="nomDeFamille" id="Nomdefamille" class="Nomdefamille inp1" placeholder="Nom :">
                     <i class='bx bxs-user' ></i>
                 </div>
                 <div class="form1-element2 form1 prenomdeuser">
-                    <input type="text" name="prenomDeUser" id="prenomDeUser" class="prenomDeUser" placeholder="Prénom">
+                    <input type="text" name="prenomDeUser" id="prenomDeUser" class="prenomDeUser inp1" placeholder="Prénom">
                     <i class='bx bx-user-plus' ></i>
                 </div>
                 <div class="form1-element3 form1 dateDeNaissance">
-                    <input type="date" name="dateDeNaissance" id="dateDeNaissance" class="dateDeNaissance">
+                    <input type="date" name="dateDeNaissance" id="dateDeNaissance" class="dateDeNaissance inp1">
                 </div>
                 <div class="form1-element4 form1 numeroDeTéléphone">
-                    <input type="number" name="numeroDeTéléphone" id="numeroDeTéléphone" class="numeroDeTéléphone" placeholder="Numéro de Téléphone">
+                    <input type="number" name="numeroDeTéléphone" id="numeroDeTéléphone" class="numeroDeTéléphone inp1" placeholder="Numéro de Téléphone">
+                    <i class='bx bxs-phone' ></i>
                 </div>
                 <div class="form1-element5 form1 adressEmail">
-                    <input type="email" name="" id="adressEmail" class="adressEmail" placeholder="Adresse Email:">
+                    <input type="email" name="" id="adressEmail" class="adressEmail inp1" placeholder="Adresse Email:">
                     <i class='bx bxs-envelope' ></i>
                 </div>
                 <div class="form1-element6 form1 adresseUser">
-                    <input type="text" name="adresseUser" id="adresseUser" class="adresseUser" placeholder="Votre Adresse:">
+                    <input type="text" name="adresseUser" id="adresseUser" class="adresseUser inp1" placeholder="Votre Adresse:">
                     <i class='bx bx-current-location' ></i>
                 </div>
                 <div class="form1-element7 form1 Username">
-                    <input type="text" name="Username" id="Username" class="Username" placeholder="Nom d'utilisateur:">
+                    <input type="text" name="Username" id="Username" class="Username inp1" placeholder="Nom d'utilisateur:">
                     <i class='bx bxs-user-badge' ></i>
                 </div>
-            </div>
-            <div class="form-2">
+                <button class="suivant" type="button">Suivant</button>
+         </div>
+            <div hidden class="form-2">
                 <div class="form2 form2-element1 ProfessionChoice">
                     <h3>Quelle est votre Profession?</h3>
                     <div class="profession1">
@@ -144,7 +147,7 @@
                     <button type="submit" class="EnvoyerLesdonnées">Envoyer</button>
                 </div>
             </div>
+        </div>
         </form>
-    </div>
 </body>
 </html>
