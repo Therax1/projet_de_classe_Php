@@ -1,3 +1,5 @@
+<?php
+include('traitement_php\traitement.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +34,7 @@
 
     <!--Partie2 : formulaire-->
 
-    <form hidden="hidden" action="traitement.php" method="POST">
+    <form hidden="hidden" action="traitement_php/traitement.php" method="POST">
         <div class="main-container">
             <div class="container">
                 <div class="form-1">
@@ -71,10 +73,10 @@
                     </div>
     
                     <div class="formbold-mb-3">
-                        <label for="address2" class="formbold-form-label">
+                        <label for="naissance" class="formbold-form-label">
                             Votre date de naissance :
                         </label>
-                        <input type="date" name="address2" id="address2" class="formbold-form-input" />
+                        <input type="date" name="naissance" id="address2" class="formbold-form-input" />
                     </div>
     
                     <div class="formbold-input-flex1">
@@ -90,7 +92,7 @@
                     <div class="formbold-checkbox-wrapper">
                         <label for="supportCheckbox" class="formbold-checkbox-label">
                             <div class="formbold-relative">
-                                <input type="checkbox" id="supportCheckbox" class="formbold-input-checkbox" />
+                                <input name="accepte" type="checkbox" id="supportCheckbox" class="formbold-input-checkbox" value="Accepter"/>
                                 <div class="formbold-checkbox-inner">
                                     <span class="formbold-opacity-0">
                                         <svg width="11" height="8" viewBox="0 0 11 8" fill="none"
