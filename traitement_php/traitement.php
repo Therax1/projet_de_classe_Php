@@ -10,9 +10,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $motDePasse = htmlspecialchars($_POST['password']);
     $reMotDePasse = htmlspecialchars($_POST['Repassword']);
     $profession = htmlspecialchars($_POST['qusOne']);
-    $interest = htmlspecialchars($_POST['qusTwo']);
+    $dt= '';
+    foreach($_POST['qusTwo'] as $element){
+        $dt = $element . ",";
+    }
+    $interest = $dt;
     $level = htmlspecialchars($_POST['qusThree']);
-
 
     if(!isset($nom, $prenom, $email, $numeroDeTelephone, $Adresse, $naissance, $motDePasse, $reMotDePasse, $profession, $interest, $level))
     {
@@ -20,12 +23,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL))
     {
         echo"Veuillez entrer une adresse E-mail valide";
-    }elseif($motDePasse !== $reMotDePasse){
-        echo"Les deux mots de Passe ne correspondent pas";
     }else{
 
         //Hashage du mot de Passe 
         $passwordHash = password_hash($motDePasse, PASSWORD_BCRYPT);
+
+        
         //Nécessaire à la Connexion avec la base de Données
         $servername = 'localhost';
         $username = 'root';
@@ -43,19 +46,19 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
         // preparation des requetes sql
         $requetesql = "INSERT INTO utilisateurs (prenomUser, nomUser, email, Telephone, adresse, Date_de_Naissance, Mot_de_Passe, ProfessionUtilisateur, Centre_Interets, LevelUser) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        $stmt = $connexion->prepare($requetesql);
-        $stmt->bind_param("sssissssss", $prenom, $nom , $email, $numeroDeTelephone, $Adresse, $naissance, $passwordHash, $profession, $interest, $level);
+        $prep = $connexion->prepare($requetesql);
+        $prep->bind_param("sssissssss", $prenom, $nom , $email, $numeroDeTelephone, $Adresse, $naissance, $passwordHash, $profession, $interest, $level);
 
-        if ($stmt->execute()) {
+        if ($prep->execute()) {
             echo"Nouvel enregistrement créé avec succès";
         } else {
             echo "Erreur : " . $sql . "<br>" . $connexion->error;
         }
 
         // Fermer la connexion
-        $stmt->close();
+        $prep->close();
         $connexion->close();
     }
-
-
 }
+
+?>
